@@ -1,0 +1,6 @@
+framework module Pods_gramify {
+  umbrella header "Pods-gramify-umbrella.h"
+
+  export *
+  module * { export * }
+}

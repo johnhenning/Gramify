@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Gramify"
+                configuration.clientKey = "fjaslfhewiulcnskljdna"
+                configuration.server = "https://whispering-shore-94259.herokuapp.com/parse"
+            })
+        )
+        
         return true
     }
 
