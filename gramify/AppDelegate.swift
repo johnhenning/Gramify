@@ -14,12 +14,17 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchToHome", name: userDidPostPhotoNotification, object: nil)
         
         Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
@@ -29,7 +34,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        if PFUser.currentUser() != nil {
+            print((PFUser.currentUser()?.username)! + " is logged in")
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as! UITabBarController
+            window?.rootViewController = vc
+        }
+        
+        
         return true
+    }
+    
+    func userDidLogout() {
+        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        window?.rootViewController = vc
+    }
+    
+    func switchToHome() {
+        let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as! UITabBarController
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(application: UIApplication) {

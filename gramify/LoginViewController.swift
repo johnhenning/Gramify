@@ -25,7 +25,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(sender: AnyObject) {
+        let username = userNameField.text!
+        let password = passwordField.text!
         
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user: PFUser?, error: NSError?) -> Void in
+            if let error = error {
+                print("User login failed.")
+                print(error.localizedDescription)
+                if (error.code == 101) {
+                    let alertController = UIAlertController(title: "Username or Password\nInvalid", message: "", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                    }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true) {
+                    }
+                }
+            } else {
+                print("User logged in successfully")
+                // display view controller that needs to shown after successful login
+                self.performSegueWithIdentifier("HomeSegue", sender: nil)
+            }
+        }
     }
     @IBAction func onSignUp(sender: AnyObject) {
         let newUser = PFUser()

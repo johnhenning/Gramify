@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A0EA630328CD92A69F45CB57 /* Pods_gramify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE801EF114AE6A0F3020DEBE /* Pods_gramify.framework */; };
+		B0693C5B1C78E1B400DA7EBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C5A1C78E1B400DA7EBF /* HomeViewController.swift */; };
+		B0693C5D1C78E20E00DA7EBF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C5C1C78E20E00DA7EBF /* SignUpViewController.swift */; };
+		B0693C5F1C78E60100DA7EBF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C5E1C78E60100DA7EBF /* ProfileViewController.swift */; };
+		B0693C621C78EB0600DA7EBF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C611C78EB0600DA7EBF /* HomeTableViewCell.swift */; };
+		B0693C661C78FAB900DA7EBF /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C651C78FAB900DA7EBF /* CommentsTableViewCell.swift */; };
+		B0693C681C78FAE100DA7EBF /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C671C78FAE100DA7EBF /* PostImageViewController.swift */; };
+		B0693C6B1C78FD3500DA7EBF /* UserMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0693C6A1C78FD3500DA7EBF /* UserMedia.swift */; };
 		B091DB061C73F0EF006C82EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DB051C73F0EF006C82EA /* AppDelegate.swift */; };
-		B091DB081C73F0EF006C82EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DB071C73F0EF006C82EA /* ViewController.swift */; };
 		B091DB0B1C73F0EF006C82EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B091DB091C73F0EF006C82EA /* Main.storyboard */; };
 		B091DB0D1C73F0EF006C82EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B091DB0C1C73F0EF006C82EA /* Assets.xcassets */; };
 		B091DB101C73F0EF006C82EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B091DB0E1C73F0EF006C82EA /* LaunchScreen.storyboard */; };
@@ -19,9 +25,15 @@
 /* Begin PBXFileReference section */
 		7BEFDDA2A102CBF0EFDED734 /* Pods-gramify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gramify.release.xcconfig"; path = "Pods/Target Support Files/Pods-gramify/Pods-gramify.release.xcconfig"; sourceTree = "<group>"; };
 		8990CE34C18B6FED5FC8734E /* Pods-gramify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gramify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gramify/Pods-gramify.debug.xcconfig"; sourceTree = "<group>"; };
+		B0693C5A1C78E1B400DA7EBF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B0693C5C1C78E20E00DA7EBF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B0693C5E1C78E60100DA7EBF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B0693C611C78EB0600DA7EBF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B0693C651C78FAB900DA7EBF /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		B0693C671C78FAE100DA7EBF /* PostImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		B0693C6A1C78FD3500DA7EBF /* UserMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedia.swift; sourceTree = "<group>"; };
 		B091DB021C73F0EF006C82EA /* gramify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gramify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B091DB051C73F0EF006C82EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B091DB071C73F0EF006C82EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B091DB0A1C73F0EF006C82EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B091DB0C1C73F0EF006C82EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B091DB0F1C73F0EF006C82EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +71,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B0693C591C78E19000DA7EBF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B091DB171C743035006C82EA /* LoginViewController.swift */,
+				B0693C5A1C78E1B400DA7EBF /* HomeViewController.swift */,
+				B0693C5C1C78E20E00DA7EBF /* SignUpViewController.swift */,
+				B0693C5E1C78E60100DA7EBF /* ProfileViewController.swift */,
+				B0693C671C78FAE100DA7EBF /* PostImageViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B0693C601C78EAF700DA7EBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0693C611C78EB0600DA7EBF /* HomeTableViewCell.swift */,
+				B0693C651C78FAB900DA7EBF /* CommentsTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B0693C691C78FD1700DA7EBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0693C6A1C78FD3500DA7EBF /* UserMedia.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B091DAF91C73F0EF006C82EA = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +121,14 @@
 		B091DB041C73F0EF006C82EA /* gramify */ = {
 			isa = PBXGroup;
 			children = (
+				B0693C691C78FD1700DA7EBF /* Models */,
+				B0693C601C78EAF700DA7EBF /* Views */,
+				B0693C591C78E19000DA7EBF /* View Controllers */,
 				B091DB051C73F0EF006C82EA /* AppDelegate.swift */,
-				B091DB071C73F0EF006C82EA /* ViewController.swift */,
 				B091DB091C73F0EF006C82EA /* Main.storyboard */,
 				B091DB0C1C73F0EF006C82EA /* Assets.xcassets */,
 				B091DB0E1C73F0EF006C82EA /* LaunchScreen.storyboard */,
 				B091DB111C73F0EF006C82EA /* Info.plist */,
-				B091DB171C743035006C82EA /* LoginViewController.swift */,
 			);
 			path = gramify;
 			sourceTree = "<group>";
@@ -214,9 +256,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0693C621C78EB0600DA7EBF /* HomeTableViewCell.swift in Sources */,
 				B091DB181C743035006C82EA /* LoginViewController.swift in Sources */,
-				B091DB081C73F0EF006C82EA /* ViewController.swift in Sources */,
 				B091DB061C73F0EF006C82EA /* AppDelegate.swift in Sources */,
+				B0693C6B1C78FD3500DA7EBF /* UserMedia.swift in Sources */,
+				B0693C5F1C78E60100DA7EBF /* ProfileViewController.swift in Sources */,
+				B0693C681C78FAE100DA7EBF /* PostImageViewController.swift in Sources */,
+				B0693C5D1C78E20E00DA7EBF /* SignUpViewController.swift in Sources */,
+				B0693C5B1C78E1B400DA7EBF /* HomeViewController.swift in Sources */,
+				B0693C661C78FAB900DA7EBF /* CommentsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
