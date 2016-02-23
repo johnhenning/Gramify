@@ -2,21 +2,21 @@
 
 **Gramify** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] User can sign up to create a new account using Parse authentication
-- [ ] User can log in and log out of his or her account
-- [ ] The current signed in user is persisted across app restarts
-- [ ] User can take a photo, add a caption, and post it to "Instagram"
-- [ ] User can view the last 20 posts submitted to "Instagram"
+- [x] User can sign up to create a new account using Parse authentication
+- [x] User can log in and log out of his or her account
+- [x] The current signed in user is persisted across app restarts
+- [x] User can take a photo, add a caption, and post it to "Instagram"
+- [x] User can view the last 20 posts submitted to "Instagram"
 
 The following **optional** features are implemented:
 
-- [ ] Show the username and creation time for each post
+- [x] Show the username and creation time for each post
 - [ ] When the user is uploading a photo, show a progress indicator to show how much of the photo has been uploaded
 - [ ] User can connect his or her Facebook account
 - [ ] User can comment on a post and see all comments for each post
@@ -34,14 +34,17 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Walkthrough 1](gramify 0.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+![Walkthrough 2](gramify 1.gif)
+
+GIF's created with [GifGrabber](https://itunes.apple.com/us/app/gifgrabber/id668208984?mt=12).
+
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+- Got the flu
 ## License
 
     Copyright [yyyy] [name of copyright owner]
