@@ -27,8 +27,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. Parse Schema setup
+2. Heroku Servers
 
 ## Video Walkthrough 
 
@@ -47,7 +47,7 @@ Describe any challenges encountered while building the app.
 - Got the flu
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [John Henning]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
