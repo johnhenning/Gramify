@@ -5,13 +5,16 @@
 //  Created by John Henning on 2/20/16.
 //  Copyright © 2016 John Henning. All rights reserved.
 //
+// swiftlint:disable variable_name
+// swiftlint:disable trailing_whitespace
+// swiftlint:disable line_length
 
 import UIKit
 
 let userDidPostPhotoNotification = "userDidPostPhotoNotification"
 
 
-class PostImageViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PostImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    
     let vc = UIImagePickerController()
     let userMedia = UserMedia()
@@ -52,8 +55,6 @@ class PostImageViewController: UIViewController,UIImagePickerControllerDelegate,
     
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            
-            let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage
             let resizedImage = resize(editedImage!, newSize: CGSize(width: 280, height: 280))
             postImageView.image = resizedImage
@@ -70,7 +71,7 @@ class PostImageViewController: UIViewController,UIImagePickerControllerDelegate,
     }
 
     @IBAction func onPost(sender: AnyObject) {
-        if (postImageView.image != nil && captionField.text != "") {
+        if postImageView.image != nil && captionField.text != "" {
             
             userMedia.postUserImage(postImageView.image!, withCaption: captionField.text!, withCompletion: { (success: Bool, error: NSError?) -> Void in
                 if let error = error {

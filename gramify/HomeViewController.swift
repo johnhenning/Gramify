@@ -5,13 +5,16 @@
 //  Created by John Henning on 2/20/16.
 //  Copyright © 2016 John Henning. All rights reserved.
 //
+// swiftlint:disable variable_name
+// swiftlint:disable trailing_whitespace
+// swiftlint:disable line_length
 
 import UIKit
 import Parse
 
 
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var userMedia: [PFObject]?
     var refreshControl: UIRefreshControl!
     
@@ -41,44 +44,42 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (userMedia != nil) {
+        if userMedia != nil {
             return userMedia!.count
-        }
-        else {
+        } else {
             return 0
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("HomeTableViewCell", forIndexPath: indexPath) as? HomeTableViewCell
         
-        if (userMedia?[indexPath.row]["media"] != nil) {
-            let userImageFile = userMedia?[indexPath.row]["media"] as! PFFile
-            userImageFile.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+        if userMedia?[indexPath.row]["media"] != nil {
+            let userImageFile = userMedia?[indexPath.row]["media"] as? PFFile
+            userImageFile!.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
                 if let error = error {
                     print(error.localizedDescription)
-                }
-                else {
+                } else {
                     let image = UIImage(data: imageData!)
-                    cell.pictureView.image = image
+                    cell!.pictureView.image = image
                 }
             })
         }
         
-        if (userMedia?[indexPath.row]["caption"] != nil) {
-            cell.captionLabel.text = userMedia![indexPath.row]["caption"] as? String
+        if userMedia?[indexPath.row]["caption"] != nil {
+            cell!.captionLabel.text = userMedia![indexPath.row]["caption"] as? String
         }
         
-        if (userMedia?[indexPath.row].createdAt != nil) {
+        if userMedia?[indexPath.row].createdAt != nil {
             var createdAt = ""
             let formatter = NSDateFormatter()
             formatter.dateStyle = .ShortStyle
             createdAt = formatter.stringFromDate(userMedia![indexPath.row].createdAt!)
-            cell.createdAtLabel.text = createdAt
+            cell!.createdAtLabel.text = createdAt
         }
         
 
-        return cell
+        return cell!
     }
     
     func ParseServerCall() {
@@ -104,7 +105,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    func delay(delay:Double, closure:()->()) {
+    func delay(delay: Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
                 DISPATCH_TIME_NOW,

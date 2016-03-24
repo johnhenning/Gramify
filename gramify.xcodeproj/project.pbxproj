@@ -146,6 +146,7 @@
 				B091DB001C73F0EF006C82EA /* Resources */,
 				9002409B708F91F120286AC0 /* Embed Pods Frameworks */,
 				1BAB60DEE576B0C7D5AF7B44 /* Copy Pods Resources */,
+				B0ACC1F11CA4A26C007E8F54 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -248,6 +249,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gramify/Pods-gramify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B0ACC1F11CA4A26C007E8F54 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

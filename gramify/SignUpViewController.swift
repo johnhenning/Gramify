@@ -5,6 +5,10 @@
 //  Created by John Henning on 2/20/16.
 //  Copyright © 2016 John Henning. All rights reserved.
 //
+// swiftlint:disable variable_name
+// swiftlint:disable trailing_whitespace
+// swiftlint:disable line_length
+// swiftlint:disable function_body_length
 
 import UIKit
 import Parse
@@ -27,7 +31,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onSignUp(sender: AnyObject) {
             
-            if (usernameField.text != "" && passwordField.text != "" && emailField.text != "") {
+            if usernameField.text != "" && passwordField.text != "" && emailField.text != "" {
                 // initialize a user object
                 let newUser = PFUser()
                 
@@ -40,7 +44,7 @@ class SignUpViewController: UIViewController {
                 newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if let error = error {
                         print(error.localizedDescription)
-                        if (error.code == 202) {
+                        if error.code == 202 {
                             let alertController = UIAlertController(title: "Username Already Exists", message: "", preferredStyle: .Alert)
                             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                             }
@@ -48,7 +52,7 @@ class SignUpViewController: UIViewController {
                             self.presentViewController(alertController, animated: true) {
                             }
                         }
-                        if (error.code == 203) {
+                        if error.code == 203 {
                             let alertController = UIAlertController(title: "Email Already Exists", message: "", preferredStyle: .Alert)
                             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                             }
@@ -56,7 +60,7 @@ class SignUpViewController: UIViewController {
                             self.presentViewController(alertController, animated: true) {
                             }
                         }
-                        if (error.code == 125) {
+                        if error.code == 125 {
                             let alertController = UIAlertController(title: "Email Address Format Is Invalid", message: "example: abc@gmail.com", preferredStyle: .Alert)
                             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                             }
@@ -70,25 +74,21 @@ class SignUpViewController: UIViewController {
                         self.performSegueWithIdentifier("SignupHomeSegue", sender: nil)
                     }
                 }
-            }
-                
-            else if (usernameField.text == "") {
+            } else if usernameField.text == "" {
                 let alertController = UIAlertController(title: "Missing Username", message: "", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 }
                 alertController.addAction(OKAction)
                 self.presentViewController(alertController, animated: true) {
                 }
-            }
-            else if (passwordField.text == "") {
+            } else if passwordField.text == "" {
                 let alertController = UIAlertController(title: "Missing Password", message: "", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 }
                 alertController.addAction(OKAction)
                 self.presentViewController(alertController, animated: true) {
                 }
-            }
-            else if (emailField.text == "") {
+            } else if emailField.text == "" {
                 let alertController = UIAlertController(title: "Missing Email", message: "", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 }
@@ -97,15 +97,4 @@ class SignUpViewController: UIViewController {
                 }
             }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

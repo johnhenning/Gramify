@@ -5,6 +5,9 @@
 //  Created by John Henning on 2/20/16.
 //  Copyright © 2016 John Henning. All rights reserved.
 //
+// swiftlint:disable variable_name
+// swiftlint:disable trailing_whitespace
+// swiftlint:disable line_length
 
 import UIKit
 import Parse
@@ -34,8 +37,7 @@ class ProfileViewController: UIViewController {
             
             if let error = error {
                 print(error.localizedDescription)
-            }
-            else {
+            } else {
                 print("Successfuly logged out")
                 NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
             }

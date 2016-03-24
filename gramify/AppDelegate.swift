@@ -5,6 +5,9 @@
 //  Created by John Henning on 2/16/16.
 //  Copyright © 2016 John Henning. All rights reserved.
 //
+// swiftlint:disable variable_name
+// swiftlint:disable trailing_whitespace
+// swiftlint:disable line_length
 
 import UIKit
 import Parse
@@ -27,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchToHome", name: userDidPostPhotoNotification, object: nil)
         
         Parse.initializeWithConfiguration(
-            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+            ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "Gramify"
                 configuration.clientKey = "fjaslfhewiulcnskljdna"
                 configuration.server = "https://whispering-shore-94259.herokuapp.com/parse"
@@ -36,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.currentUser() != nil {
             print((PFUser.currentUser()?.username)! + " is logged in")
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as! UITabBarController
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as? UITabBarController
             window?.rootViewController = vc
         }
         
@@ -50,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func switchToHome() {
-        let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as! UITabBarController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarHome") as? UITabBarController
         window?.rootViewController = vc
     }
 
@@ -78,4 +81,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
