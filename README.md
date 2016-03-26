@@ -45,9 +45,11 @@ GIF's created with [GifGrabber](https://itunes.apple.com/us/app/gifgrabber/id668
 
 Describe any challenges encountered while building the app.
 - Got the flu
+
+
 ## License
 
-    Copyright [2016] [John Henning]
+    Copyright 2016 John Henning
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
