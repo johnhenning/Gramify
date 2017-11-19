@@ -34,9 +34,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![Walkthrough 1](gramify 0.gif)
+[Walkthrough 1](gramify 0.gif)
 
-![Walkthrough 2](gramify 1.gif)
+[Walkthrough 2](gramify 1.gif)
 
 GIF's created with [GifGrabber](https://itunes.apple.com/us/app/gifgrabber/id668208984?mt=12).
 
